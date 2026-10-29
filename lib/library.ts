@@ -1,0 +1,180 @@
+export type LibraryTopic = {
+  id: string
+  category: 'Registration' | 'Tax & Compliance' | 'Branding' | 'Online presence' | 'Growth' | 'Funding'
+  title: string
+  summary: string
+  points: string[]
+  askMesa: string
+}
+
+export const LIBRARY: LibraryTopic[] = [
+  {
+    id: 'entity-types',
+    category: 'Registration',
+    title: 'Choosing the right business structure',
+    summary: 'Your entity type decides liability, tax, and how investors and banks see you.',
+    points: [
+      'Sole proprietor: fastest to start, no separate legal identity — you are personally liable for debts.',
+      'Partnership: two or more owners share profits and liability; always sign a written partnership agreement.',
+      'Private company (Pty Ltd / Ltd / LLC): separate legal person, limited liability, easier to raise capital and win tenders.',
+      'Non-profit company (NPC): for social, cultural or community goals; profits cannot be distributed to members.',
+      'Most government procurement databases (CSD, SAM.gov, GeM) expect a registered legal entity with a tax number.',
+    ],
+    askMesa: 'Which business structure is best for my business and why?',
+  },
+  {
+    id: 'cipc-steps',
+    category: 'Registration',
+    title: 'Registering a company with CIPC (South Africa)',
+    summary: 'The standard path from name reservation to a registration certificate.',
+    points: [
+      'Create a CIPC customer profile and fund your account.',
+      'Reserve up to four proposed names (or register with your registration number as the name).',
+      'File the company registration with director details, a certified ID copy and the Memorandum of Incorporation (MOI).',
+      'Receive the COR14.3 registration certificate; a SARS income tax number is typically issued automatically.',
+      'File annual returns every year within 30 business days after the anniversary of incorporation to stay compliant.',
+      'Submit Beneficial Ownership information as required by the Companies Act amendments.',
+    ],
+    askMesa: 'Walk me through registering my company on CIPC',
+  },
+  {
+    id: 'tax-basics',
+    category: 'Tax & Compliance',
+    title: 'Tax registration essentials',
+    summary: 'The tax types most new businesses must consider in the first year.',
+    points: [
+      'Income tax: companies pay corporate income tax on profits; sole proprietors pay personal income tax.',
+      'VAT / GST / sales tax: compulsory once turnover crosses the local threshold (e.g. R1 million in 12 months in South Africa).',
+      'Employer taxes: register for PAYE, UIF and SDL (South Africa) or local equivalents before paying salaries.',
+      'Keep invoices, bank statements and receipts for at least five years — most authorities require it.',
+      'A tax clearance / tax compliance status PIN is often required for tenders and supplier databases.',
+    ],
+    askMesa: 'Which taxes must my new business register for?',
+  },
+  {
+    id: 'csd-supplier',
+    category: 'Tax & Compliance',
+    title: 'Becoming a government supplier',
+    summary: 'How supplier databases like CSD, SAM.gov and GeM work.',
+    points: [
+      'Supplier databases verify your company, tax, bank and director information against national systems.',
+      'In South Africa, CSD registration produces an MAAA supplier number required by all state organs.',
+      'Have a B-BBEE certificate or sworn affidavit ready — it affects tender scoring.',
+      'Keep your banking details and tax status current; out-of-date records block payments.',
+      'Monitor tender portals (eTenders, Find a Tender, TED) for opportunities in your category.',
+    ],
+    askMesa: 'Register my business as a government supplier',
+  },
+  {
+    id: 'brand-identity',
+    category: 'Branding',
+    title: 'Building a brand identity that is truly yours',
+    summary: 'Original branding protects you from copyright and trademark disputes.',
+    points: [
+      'Start from your own sketch or idea — Mesa turns drawings into original logo concepts.',
+      'Avoid stock icons, famous fonts in logo form, and look-alike marks of existing brands.',
+      'Define a palette of 3–5 colours and 1–2 typefaces and use them everywhere consistently.',
+      'Run a trademark search in your country (e.g. CIPC trade marks, USPTO, EUIPO) before launch.',
+      'Register your trademark once the name and logo are final to secure exclusive rights.',
+    ],
+    askMesa: 'Help me create an original brand identity',
+  },
+  {
+    id: 'print-collateral',
+    category: 'Branding',
+    title: 'Posters, menus and flyers that sell',
+    summary: 'Design rules for print collateral that drives action.',
+    points: [
+      'One clear headline, one offer, one call to action per flyer.',
+      'Menus: group by category, put high-margin items top-right, and keep descriptions short.',
+      'Use high contrast between text and background for readability from a distance.',
+      'Include a QR code that links to your website, booking page or WhatsApp.',
+      'Export print files at 300 DPI with 3 mm bleed.',
+    ],
+    askMesa: 'Design a flyer for my business promotion',
+  },
+  {
+    id: 'google-profile',
+    category: 'Online presence',
+    title: 'Google Business Profile playbook',
+    summary: 'Show up on Google Search and Maps when customers look for you.',
+    points: [
+      'Use your real business name — keyword stuffing can get the profile suspended.',
+      'Choose the most specific primary category and add relevant secondary categories.',
+      'Add opening hours, phone, website and at least 10 quality photos.',
+      'Ask happy customers for reviews and reply to every review within 48 hours.',
+      'Post weekly updates and offers to stay active in local results.',
+    ],
+    askMesa: 'Create a Google Business Profile for my business',
+  },
+  {
+    id: 'domains-dns',
+    category: 'Online presence',
+    title: 'Domains, DNS and going live',
+    summary: 'What happens when you connect a domain and publish a website.',
+    points: [
+      'Pick a short domain that matches your brand; local TLDs (.co.za, .co.uk) build trust locally.',
+      'An A record points your root domain to a server IP; a CNAME points subdomains like www to a host.',
+      'SSL certificates (HTTPS) are issued automatically by modern hosts once DNS resolves.',
+      'DNS changes can take minutes to 48 hours to propagate worldwide.',
+      'Set up a business email on your domain (e.g. hello@yourbrand.com) for credibility.',
+    ],
+    askMesa: 'Build my website and connect my domain',
+  },
+  {
+    id: 'website-essentials',
+    category: 'Online presence',
+    title: 'Website essentials for small businesses',
+    summary: 'The pages and features every business site needs.',
+    points: [
+      'Home, Services/Products, About, Contact — plus a clear call to action on every page.',
+      'Show your registration number and physical address to build trust.',
+      'Make it mobile-first: most local searches happen on phones.',
+      'Add a privacy policy if you collect any personal information (POPIA, GDPR).',
+      'Connect analytics to learn which pages convert visitors into customers.',
+    ],
+    askMesa: 'Generate a sitemap and wireframe for my business website',
+  },
+  {
+    id: 'privacy',
+    category: 'Tax & Compliance',
+    title: 'Protecting client data (POPIA, GDPR)',
+    summary: 'How to handle personal information legally and securely.',
+    points: [
+      'Collect only the personal information you need and explain why you collect it.',
+      'Appoint an Information Officer (POPIA) or Data Protection Officer where required.',
+      'Encrypt data in transit (HTTPS) and at rest; restrict staff access on a need-to-know basis.',
+      'Report data breaches to the regulator and affected people without undue delay.',
+      'Mesa masks ID numbers and sensitive identifiers in its responses by default.',
+    ],
+    askMesa: 'How do I make my business POPIA compliant?',
+  },
+  {
+    id: 'marketing',
+    category: 'Growth',
+    title: 'Low-cost marketing that works',
+    summary: 'Channels that bring the first 100 customers.',
+    points: [
+      'WhatsApp Business catalogue and broadcast lists for repeat customers.',
+      'Google Business Profile posts and reviews for local discovery.',
+      'Short-form video on Instagram, TikTok and Facebook showing your work.',
+      'Referral offers: reward customers who bring friends.',
+      'Partner with complementary local businesses for cross-promotion.',
+    ],
+    askMesa: 'Create a 30-day marketing plan for my business',
+  },
+  {
+    id: 'funding',
+    category: 'Funding',
+    title: 'Funding options for new businesses',
+    summary: 'Where small businesses find capital beyond personal savings.',
+    points: [
+      'Government development agencies (e.g. SEFA and NYDA in South Africa, SBA in the US).',
+      'Enterprise and supplier development programmes run by large corporates.',
+      'Bank SME loans — usually need 6–12 months of bank statements and financials.',
+      'Grants and competitions for youth, women-owned and green businesses.',
+      'A registered company, tax compliance and a business plan are prerequisites almost everywhere.',
+    ],
+    askMesa: 'What funding can my business apply for?',
+  },
+]
